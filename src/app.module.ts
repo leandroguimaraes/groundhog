@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database.module';
+import { GroundhogsModule } from './groundhogs/groundhogs.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { DatabaseModule } from './database.module';
       envFilePath: '.env',
     }),
     DatabaseModule,
+    GroundhogsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
